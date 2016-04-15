@@ -1,6 +1,8 @@
 var dispatcher = require('./../dispatcher.js');
+var helper = require('./../helpers/RestHelper.js');
 
 function GroceryItemStore(){
+  
     var items = [{
         name:"Ice Cream"
     },{
@@ -11,6 +13,12 @@ function GroceryItemStore(){
     },{
         name:"Snarks"
     }];
+
+    // helper.get("/api/items")
+    // .then(function(data) {
+    //     items = data;
+    //     triggerListeners();
+    // })
 
     var listeners = [];
 

@@ -1,4 +1,8 @@
+'use strict';
+
 module.exports = function(app){
+
+    console.log("running items.js");
 
     var items = [{
         name:"Ice Cream"
@@ -11,9 +15,8 @@ module.exports = function(app){
         name:"Snarks"
     }];
 
-    app.route('/api/items')
-    .get(function(req,res){
+    app.get('/api/items', function(req, res) {
         res.send(items);
-    })
+    });
 
 }
